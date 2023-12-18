@@ -28,7 +28,7 @@
 #if DEBUG_ENABLED
 #define DEBUG(...) logger::log(__FILE__, __LINE__, logger::DEBUG, __VA_ARGS__)
 #else
-#define DEBUG(...) false
+#define DEBUG(...) (void)sizeof(__VA_ARGS__)
 #endif
 #define WARNING(...)                                                           \
   logger::log(__FILE__, __LINE__, logger::WARNING, __VA_ARGS__)
