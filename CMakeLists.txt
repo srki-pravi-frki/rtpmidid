@@ -11,7 +11,7 @@ include(FindPkgConfig)
 pkg_check_modules(AVAHI REQUIRED avahi-client)
 pkg_check_modules(FMT REQUIRED fmt)
 pkg_check_modules(ALSA REQUIRED alsa)
-
+add_compile_definitions(DEBUG_ENABLED=false)
 
 include_directories(${CMAKE_SOURCE_DIR}/src ${CMAKE_SOURCE_DIR}/include)
 enable_testing()
